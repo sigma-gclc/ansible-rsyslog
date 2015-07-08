@@ -66,7 +66,7 @@ local7.*                                                /var/log/boot.log
 
 
 # Forward to logstash
-*.* @{{ logstash_forwarder.private_ip }}:514
+*.* @{{ logstash_forwarder }}:514
 
 
 # ### begin forwarding rule ###
