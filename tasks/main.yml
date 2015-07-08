@@ -26,7 +26,7 @@
     backup=yes
   notify:
     - Restart rsyslog
-  when: rsyslog_conf.stat.exists == True
+  when: rsyslog_conf.stat.exists == True and rsyslog_conf.override is defined
   tags:
     - rsyslog
     - files
