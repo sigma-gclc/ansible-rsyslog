@@ -64,10 +64,10 @@ uucp,news.crit                                          /var/log/spooler
 # Save boot messages also to boot.log
 local7.*                                                /var/log/boot.log
 
-{% if logstash_forwarder is defined %}
+
 # Forward to logstash
 *.* @{{ logstash_forwarder.private_ip }}:514
-{% endif %}
+
 
 # ### begin forwarding rule ###
 # The statement between the begin ... end define a SINGLE forwarding
